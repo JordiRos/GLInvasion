@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" xmlns:fb="https://www.facebook.com/2008/fbml">
+    <head>
+        <title>GL Invasion</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            body {
+                color: #e2e2e2;
+                font-size: 13px;
+                text-align: left;
+                font-weight: bold;
+
+                background-color: #000;
+                margin: 0px;
+                overflow: hidden;
+            }
+
+            #container {
+                position: absolute;
+                left: 50%;
+                top: 50%;                
+                height: 100%; max-height: 800px
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div id="container" />
+
+        <script src="libs/three.js"></script>
+        <script src="js/ShaderExtras.js"></script>
+        <script src="js/Detector.js"></script>
+        <script src="js/RequestAnimationFrame.js"></script>
+        <script src="js/Stats.js"></script>
+        <script src="js/Timer.js"></script>
+        <script src="js/AnimUtils.js"></script>
+        <script src="js/AnimVar.js"></script>
+        <script src="js/Path.js"></script>
+        <script src="js/Tween.js"></script>
+        <script src="js/Font.js"></script>
+        <script src="js/SpriteSeq.js"></script>
+        <script src="js/SpriteAtlas.js"></script>
+        <script src="js/SpriteBatch.js"></script>
+        <script src="js/Loader.js"></script>
+        <script src="js/Loading.js"></script>
+        <script src="js/Globals.js"></script>
+        <script src="js/GLHud.js"></script>
+        <!-- Gui -->
+        <script src="js/gui/Gui.js"></script>
+        <script src="js/gui/Control.js"></script>
+        <script src="js/gui/ScreenMain.js"></script>
+        <script src="js/gui/ScreenGame.js"></script>
+        <!-- Game -->
+        <script src="js/game/App.js"></script>
+        <script src="js/game/Game.js"></script>
+        <script src="js/game/World.js"></script>
+        <script src="js/game/Module.js"></script>
+        <script src="js/game/ModuleManager.js"></script>
+        <script src="js/game/MMapManager.js"></script>
+        <script src="js/game/MPlayerController.js"></script>
+        <script src="js/game/MEntityManager.js"></script>
+        <script src="js/game/MScoreManager.js"></script>
+        <script src="js/game/Shape.js"></script>
+        <script src="js/game/ShapeCircle.js"></script>
+        <script src="js/game/ShapePolygon.js"></script>
+        <script src="js/game/Sprite.js"></script>
+        <script src="js/game/Entity.js"></script>
+        <script src="js/game/Actions.js"></script>
+        <script src="js/game/AnimLabel.js"></script>
+        <!-- Resources -->
+        <script src="js/resources/Fonts.js"></script>
+        <script src="js/resources/Textures.js"></script>
+        <script src="js/resources/Sprites.js"></script>
+        <script src="js/resources/Sounds.js"></script>
+        <script src="js/resources/Explosions.js"></script>
+        <script src="js/resources/Decals.js"></script>
+        <script src="js/resources/Bullets.js"></script>
+        <script src="js/resources/Powers.js"></script>
+        <!-- Entities -->
+        <script src="js/resources/EntityOverlayText.js"></script>
+        <script src="js/resources/EntityOverlaySprite.js"></script>
+        <script src="js/resources/EntityOverlayLaser.js"></script>
+        <script src="js/resources/EntityShip.js"></script>
+        <script src="js/resources/EntitySprite.js"></script>
+        <script src="js/resources/EntityBullet.js"></script>
+        <script src="js/resources/EntityPower.js"></script>
+        <script src="js/resources/EntityPoints.js"></script>
+        <script src="js/resources/EntityEnemyStd.js"></script>
+		<script src="js/resources/EntityEnemyTank.js"></script>
+		<script src="js/resources/EntityEnemyBoss.js"></script>
+        <script src="js/resources/ActionsEnemy.js"></script>
+        <script src="js/resources/ActionsBoss1.js"></script>
+        <script src="js/resources/Enemies.js"></script>        
+        <script src="js/resources/Level1.js"></script>
+        <script src="js/resources/Overlays.js"></script>
+        <!-- Effects -->
+        <script src="js/game/FXWater.js"></script>
+
+        <script>
+            var app;
+            var settings = {
+                container: document.getElementById('container'),
+                window: { w: APP_W, h: APP_H },
+                friends: [],
+            };
+            // Start!
+            if (!Detector.webgl)
+                Detector.addGetWebGLMessage();
+            else {
+                app = new App(settings);
+                app.start();
+            }
+        </script>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-33258922-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+    </body>
+</html>
