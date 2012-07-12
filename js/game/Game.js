@@ -40,7 +40,7 @@ Game = function(settings) {
         while(currentElement = currentElement.offsetParent);
         canvasX = ((x - totalOffsetX) + (settings.canvassize / 2.0)) * (APP_H / settings.canvassize); 
         canvasY = ((y - totalOffsetY) + (settings.canvassize / 2.0)) * (APP_H / settings.canvassize);
-        GLog('Game', 'Mouse Coords: ' + x + '/' + y + ' => ' + canvasX + '/' + canvasY);
+        //GLog('Game', 'Mouse Coords: ' + x + '/' + y + ' => ' + canvasX + '/' + canvasY);
         return {x: canvasX, y: canvasY}
     }
 
