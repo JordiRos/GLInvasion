@@ -1,0 +1,38 @@
+Introduction
+============
+
+GL Invasion is an oldskol shmup one level game made entirely with WebGL and JS, using Three.js by MrDoob.
+You can play a complete version here:
+
+http://jordiros.me/glinvasion
+
+Features
+========
+
+- WebGL / Three.js for rendering
+- Standard Game/World/Entities model + managers
+- All data is in JS files: behaviours, bullet patterns, enemy actions, enemy positions, explosions, decals, powerups, stars, fonts, etc. It's pretty easy tu upgrade and add any of this stuff. All this in /resources
+- Simple collision system: polygon + circle (some entities are fine with just a circle, others can have a polygon collision mesh)
+- Basic GUI, extendable: screens + controls
+- Loading progress at first and for every level
+- Basic level editor: map starts static, dragable, and ground units can be moved. So it's like, ok, I'll put this units here, then write the coordinates in JS level data (Level1.js) :p
+  Air units don't depend on position, but on appearance time. Same on Boss
+
+To Do
+=====
+- Draw all bullets (and water fx bullets) in a single batch. With basic Three.js is not that easy to implement, but was encapsulated in SpriteBatch.js for easy replacement when done
+- Add your favourite postprocessing to the global scene. The scene is already rendering to RT, so it'd pretty easy to add
+- Add sound. I've some nasty sounds, and added that I found audio API still a bit buggy, I thought better to have no sound at all atm.
+- TextureAtlas. I started without knowing TexturePacker, and I used my custom easy SpriteAtlas to import. It should be nice to have a TexturePacker loader.
+- Lifes! Only one life at the moment :)
+- A couple more enemy behaviours (Medusa Sinus Head!)
+- A nicer level editor
+
+License
+=======
+See LICENSE file
+
+Contact
+=======
+Jordi Ros: jordirosz@gmail.com
+http://jordiros.me
