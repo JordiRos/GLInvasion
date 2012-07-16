@@ -119,6 +119,7 @@ ScreenMain.create = function() {
             if (x > 200 && x < 660 && y > (dy+30) && y < (dy+30+15)) window.openOrFocus('https://www.facebook.com/victor.royoilustrador', 'VictorRoyo');
             if (x > 200 && x < 660 && y > (dy+60) && y < (dy+60+15)) window.openOrFocus('https://github.com/mrdoob/three.js/', 'ThreeJS');
         }
+        return true;        
     }
 
     return screen;

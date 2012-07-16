@@ -21,6 +21,7 @@ Game = function(settings) {
     this.loaded = false;
     Loading.load();
     // DOMEvents
+    settings.container.focus();
     document.addEventListener('keydown',   function(e) { Game.Instance.onKeyDown  (e) }, true);
     document.addEventListener('keyup',     function(e) { Game.Instance.onKeyUp    (e) }, true);
     document.addEventListener('mousedown', function(e) { Game.Instance.onMouseDown(e) }, true);
@@ -167,6 +168,7 @@ Game.prototype.onKeyDown = function(e) {
         if (this.gui.keyPress(e.keyCode, true))
             e.preventDefault();
     }
+    e.preventDefault();
 }
 
 Game.prototype.onKeyUp = function(e) {
@@ -174,6 +176,7 @@ Game.prototype.onKeyUp = function(e) {
         if (this.gui.keyPress(e.keyCode, false))
             e.preventDefault();
     }
+    e.preventDefault();
 }
 
 Game.prototype.onMouseDown = function(e) {
